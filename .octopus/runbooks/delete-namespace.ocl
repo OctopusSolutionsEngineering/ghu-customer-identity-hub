@@ -14,7 +14,7 @@ process {
     process_template "delete-namespace" {
         name = "Delete namespace"
         process_template_slug = "ph-kubernetes-delete-namespace"
-        version_mask = "1.X"
+        version_mask = "PreRelease"
 
         parameter "Template.Tag" {
             value = "customer-identity-hub"
@@ -30,6 +30,10 @@ process {
 
         parameter "Template.Teams.Approvers" {
             value = "Teams-2"
+        }
+
+        parameter "Template.Worker.Pool" {
+            value = "WorkerPools-5336"
         }
     }
 }
