@@ -10,4 +10,26 @@ run_retention_policy {
     quantity_to_keep = 100
 }
 
-process {}
+process {
+    process_template "delete-namespace" {
+        name = "Delete namespace"
+        process_template_slug = "ph-kubernetes-delete-namespace"
+        version_mask = "1.X"
+
+        parameter "Template.Tag" {
+            value = "customer-identity-hub"
+        }
+
+        parameter "Template.Cluster.Namespace" {
+            value = "#{AccountManagement.Cluster.Namespace}"
+        }
+
+        parameter "Template.Environments.RequireApproval" {
+            value = "Environments-5833"
+        }
+
+        parameter "Template.Teams.Approvers" {
+            value = "Teams-2"
+        }
+    }
+}
