@@ -4,7 +4,7 @@ connectivity_policy {
 
 versioning_strategy {
     donor_package {
-        package = "app-container"
-        step = "89a50c36-6c4d-48ff-980f-bcfe3db698d1-apply-deployment"
+        package = "template-sbom-artifact"
+        step = "verify-artifacts-attach-sbom-to-release"
     }
 }
