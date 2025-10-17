@@ -26,6 +26,7 @@ process_template "verify-artifacts" {
 }
 
 process_template "deploy-api" {
+    is_disabled = true
     name = "Deploy API"
     process_template_slug = "ph-kubernetes-deploy-yaml-demo-app"
     version_mask = "1.X"
