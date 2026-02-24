@@ -248,4 +248,3 @@ jobs:
         with:
           project: ${{ env.OCTOPUS_PROJECT }}
           release_number: ${{ needs.configure.outputs.version }}
-          git_ref: ${{ github.ref }}
