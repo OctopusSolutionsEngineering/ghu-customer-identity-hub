@@ -248,6 +248,4 @@ jobs:
         with:
           project: ${{ env.OCTOPUS_PROJECT }}
           release_number: ${{ needs.configure.outputs.version }}
-          packages: |
-            ${{ env.DOCKER_HUB_REPOSITORY }}:${{ needs.configure.outputs.version }}
-            ${{ env.SBOM_PACKAGE }}:${{ needs.configure.outputs.version }}
+          git_ref: ${{ github.ref }}
