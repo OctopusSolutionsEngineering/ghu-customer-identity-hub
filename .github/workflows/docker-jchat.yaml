@@ -247,4 +247,3 @@ jobs:
         uses: OctopusDeploy/create-release-action@v3
         with:
           project: ${{ env.OCTOPUS_PROJECT }}
-          release_number: ${{ needs.configure.outputs.version }}
