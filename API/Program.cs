@@ -11,7 +11,7 @@ if (builder.Environment.IsDevelopment())
 {
     Console.WriteLine("In Development mode");
     await OpenFeature.Api.Instance.SetProviderAsync(new EnvVarProvider("FeatureToggle_"));
-    //await OpenFeature.Api.Instance.SetProvider(new EnvVarProvider("Feature_Toggle_"));
+    //await OpenFeature.Api.Instance.SetProvider(new EnvVarProvider("Feature_Toggle"));
 }
 else if (!string.IsNullOrEmpty(clientIdentifier))
 {
